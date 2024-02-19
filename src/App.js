@@ -1,4 +1,7 @@
 import "./App.css";
+import User from './component/User';
+
+console.log(User(1,2));
 
 function App() {
     return (
