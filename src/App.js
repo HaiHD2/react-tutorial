@@ -1,24 +1,31 @@
 import "./App.css";
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+// import React from 'react';
+// import ReactDOM from 'react-dom/client';
 
-let stateValue; // Vị trí khai báo: global
+// let stateValue; // Vị trí khai báo: global
 
-function useState(intialState) {
-    if (stateValue === undefined) {
-        stateValue = intialState;
-    }
-    function setValue(value) {
-        stateValue = value;
-        ReactDOM.createRoot(document.getElementById("root")).render(
-            <React.StrictMode>
-                <App />
-            </React.StrictMode>
-        );
-    }
+// function useState(intialState) {
+//     if (stateValue === undefined) {
+//         stateValue = intialState;
+//     }
+//     function setValue(value) {
+//         stateValue = value;
 
-    return [stateValue, setValue];
-}
+//         // Sau khi state thay đổi render lại
+//         ReactDOM.createRoot(document.getElementById("root")).render(
+//             <React.StrictMode>
+//                 <App />
+//             </React.StrictMode>
+//         );
+//     }
+
+//     return [stateValue, setValue];
+// }
+
+// Khi ấn vào increment
+// stateValue = 2
+// 
+
 
 function App() {
     const [counter, setCounter] = useState(1);
