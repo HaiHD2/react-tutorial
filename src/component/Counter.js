@@ -12,8 +12,6 @@
 // export default Counter;
 
 
-
-
 function Counter() {
     const styles = {
         fontSize: "20px",
