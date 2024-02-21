@@ -1,10 +1,11 @@
 import "./App.css";
+import JavComponent from "./components/JavComponent";
 
 
 function App() {
     return (
         <div className="App">
-            <h1>Hello World</h1>
+            <JavComponent/>
         </div>
     );
 }
