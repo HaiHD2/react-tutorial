@@ -6,11 +6,17 @@ function App() {
 
     const [parentToChild, setParentToChild] = useState('parent to child');
 
+    const handleDelete = (id) => {
+        console.log('id', id);
+    }
 
     return (
         <div className="App">
             <h1>Hello World</h1>
-            <Child parentToChild={parentToChild} name="duc" isCompleted={false} />
+            <Child 
+            parentToChild={parentToChild} 
+            name="hai"
+            onDelete={handleDelete} />
         </div>
     );
 }

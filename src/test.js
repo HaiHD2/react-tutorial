@@ -1,15 +1,21 @@
-// truyền data từ cha xuống con
+// truyền data từ con lên cha
 
 // index.html chứa index.js -> render content App component đến div#root
 function app() {
 
-    let app_variable = "parent to child"; // state
-    child(app_variable); // props
+    const handleDelete = function(dataFromChild) {
+        console.log('data from child:', dataFromChild);
+    }
+
+    child(handleDelete);
 }
 
-function child(parentToChild) {
+function child(callback) {
+    // console.log("callback: ", callback);
 
-    console.log("parent to child = ",parentToChild);
+    const childData = "child data"; // child
+    callback(childData);
+
 }
 
 app();

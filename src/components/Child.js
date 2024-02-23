@@ -1,15 +1,20 @@
-import React from 'react'
+import React from "react";
 
 function Child(props) {
 
-    const {parentToChild, name} = props;
+    const onDelete = props.onDelete;
 
-    console.log("parentToChild",parentToChild);
+    const handleDelete = () => {
+        onDelete(2);
+    }
+
     return (
         <div>
-            Child
+            <button 
+            onClick={handleDelete}
+            className="btn btn-danger btn-sm">Delete</button>
         </div>
-    )
+    );
 }
 
-export default Child
+export default Child;
